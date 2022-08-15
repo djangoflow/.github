@@ -7,6 +7,6 @@ We also use [openapi-generator](https://openapi-generator.tech/docs/generators/d
 
 ## History
 
-Having built a lot of software for startups [Apexive](https://apexive.com "Top-notch software development for startups. In weeks, not months.") has accumulated extensive experience and created re-usable libraries ("building blocks") that now enables us produce high quality code in weeks, not months.
+Having built a lot of software for startups [Apexive](https://apexive.com "Top-notch software development for startups. In weeks, not months.") has accumulated extensive experience and created re-usable libraries ("building blocks") that now enable us to produce high quality code in weeks, not months.
 
 Djangoflow is [Apexive](https://apexive.com "Top-notch software development for startups. In weeks, not months.") effort of open sourcing those libraries and sharing our experience with the open source community.
