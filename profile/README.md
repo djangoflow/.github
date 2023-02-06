@@ -11,3 +11,5 @@ Having built a lot of software for startups [Apexive](https://apexive.com "Top-n
 
 Djangoflow is [Apexive](https://apexive.com "Top-notch software development for startups. In weeks, not months.") effort of open sourcing those libraries and sharing our experience with the open source community.
 
+## 📍 Resources
+[Slack community] (https://join.slack.com/t/apexiverse/shared_invite/zt-1ols0scna-Pl~WaO2SA3SBTZyuL1vlvg)
