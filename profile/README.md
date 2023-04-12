@@ -15,6 +15,7 @@ Djangoflow is [Apexive](https://apexive.com "Top-notch software development for 
 [Slack community](https://join.slack.com/t/apexiverse/shared_invite/zt-1ols0scna-Pl~WaO2SA3SBTZyuL1vlvg)
 
 ## Django modules
+
 +------------+------------------------------------+------------------------------------------------------------------------------------------+
 |            | Name                               | Description                                                                              |
 +------------+------------------------------------+------------------------------------------------------------------------------------------+
