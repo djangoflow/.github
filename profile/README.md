@@ -10,7 +10,7 @@
     <img src='https://img.shields.io/badge/Join-Slack-green'>
   </a>
   <!-- twitter -->
-  <a href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fdjangoflow&text=Join%20us%20in%20revolutionizing%20software%20development%20with%20DjangoFlow&hashtags=Django%2CFlutter' target='_blank'>
+  <a href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fdjangoflow&text=Join%20us%20in%20revolutionizing%20software%20development%20with%20DjangoFlow&hashtags=Django%2CFlutter%2CDjangoFlow' target='_blank'>
     <img src='https://img.shields.io/twitter/url/http/shields.io.svg?style=social'/>
   </a>
  <!-- discord --> 
@@ -56,7 +56,12 @@ Contribute: [![GitHub issues](https://img.shields.io/github/issues-raw/djangoflo
 
 | Package | Description | Repository |
 |------|-------------|------------|
-| djangoflow_websocket | Easily manage connecting to a WebSocket server, subscribing to messages, handling reconnections etc all at once with djangoflow_websocket | [Link](https://pub.dev/packages/djangoflow_websocket) |
+| djangoflow_auth | Integrate various authentication providers, such as email OTP, magic link, Google, Facebook, Apple Sign-In, Discord, and more. This package provides a comprehensive and easy-to-use solution for managing user authentication. | [Link](https://pub.dev/packages/djangoflow_auth) |
+| djangoflow_auth_google | Integrate Google Sign-In with ease using the `GoogleSocialLogin` class. This package allows you to effortlessly handle Google authentication for both web and mobile platforms, enhancing your app's login experience.| [Link](https://pub.dev/packages/djangoflow_auth_google) |
+| djangoflow_auth_facebook | Effortlessly handle Facebook login with customizable permissions and login behavior. Use the `FacebookSocialLogin` class to integrate Facebook Sign-In into your app and provide users with the option to sign in using their Facebook accounts. | [Link](https://pub.dev/packages/djangoflow_auth_facebook) |
+| djangoflow_auth_apple | Seamlessly integrate Apple authentication for both web and mobile platforms using the `AppleSocialLogin` class. Support customizable scopes, state, nonce, and more. Provide a secure and convenient way for users to sign in with their Apple IDs. | [Link](https://pub.dev/packages/djangoflow_auth_apple) |
+| djangoflow_auth_discord | Use the `DiscordSocialLoginProvider` class to handle Discord login with ease. This package provides support for both web and mobile platforms, allowing users to authenticate using their Discord accounts. | [Link](https://pub.dev/packages/djangoflow_auth_discord) |
+|  djangoflow_websocket | Easily manage connecting to a WebSocket server, subscribing to messages, handling reconnections etc all at once with djangoflow_websocket | [Link](https://pub.dev/packages/djangoflow_websocket) |
 | djangoflow_app | A simple, opinionated, and minimal Flutter application structure for quick start and easy maintenance. | [Link](https://pub.dev/packages/djangoflow_app) |
 | djangoflow_app_links | A Djangoflow package that implements deep-link handling via app_links package. | [Link](https://pub.dev/packages/djangoflow_app_links) |
 | djangoflow_analytics | A library for tracking analytics with multiple Analytics providers in Flutter applications. | [Link](https://pub.dev/packages/djangoflow_analytics) |
