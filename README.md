@@ -74,7 +74,42 @@ The best way to discover the ecosystem is by trying out https://github.com/djang
 
 Most of the backend djangoflow modules will have one or more flutter counterparts.
 
-TODO(saiful): describe how flutter modules are setup 
+At the heart of our system is the [djangoflow-django-openapi](https://github.com/djangoflow/djangoflow-django-openapi) module. This Django module is responsible for defining the schema for OpenAPI methods and models that Flutter djangoflow packages can use. Updated API schema and methods are auto-generated via a GitHub action. It automatically generates an OpenAPI client and publishes it as a flutter package for our Flutter apps, named [djangoflow_openapi](https://pub.dev/packages/djangoflow_openapi).
+
+The `djangoflow_openapi` package serves as the foundational blueprint for our Flutter packages and projects. It provides the necessary API models and methods that are consistent across different projects. This ensures that our Flutter apps have a standardized way of communicating with our backends which are using djangoflow django modules and `djangoflow_openapi` package works as a reference.
+
+Let's see how our `df-django-auth` django modules interact with `djangoflow_auth` flutter package for example:
+`djangoflow_openapi` pub package contains OpenAPI client methods and models generated via `djangoflow-django-openapi`. Let's assume `AuthApi` class in `djangoflow_openapi` which holds all the authentication-related methods looks like this:
+```dart
+class AuthApi {
+  Future<Response<Token>> authSocialConnectCreate({ 
+      required SocialTokenObtainRequest socialTokenObtainRequest,
+....... etc,
+}
+```
+
+Now in another new django project, which uses `df-django-auth` module for authentication, we can generate a local `djangoflow_openapi` package by using this command(make sure if you have [openapi-generator](https://github.com/OpenAPITools/openapi-generator) installed already)
+```bash
+openapi-generator generate -g dart-dio -p browserClient=false -p nullableFields=true \
+  -p serializationLibrary=json_serializable -p pubName=djangoflow_openapi \
+  -p pubLibrary=djangoflow_openapi \
+    -i ${hostname}/api/${API_VERSION}/schema -o ${TARGET_DIR} 
+```
+
+**Note**: A more sophisticated example of doing it can be found [here](https://github.com/djangoflow/djangoflow-examples/blob/main/simple_auth/frontend-flutter/tools/generate-openapi.sh).
+
+When we generate `djangoflow_openapi` package for the Flutter app locally for this new project via openapi-generator CLI, it will also generate the same AuthApi with the same models, and methods. 
+
+```dart
+class AuthApi {
+  Future<Response<Token>> authSocialConnectCreate({ 
+      required SocialTokenObtainRequest socialTokenObtainRequest,
+....... etc,
+}
+```
+It is because `djangoflow-django-openapi` uses the same schema blueprint for OpenAPI models and methods that are being used in `df-django-auth` module. So any projects that are using `df-django-auth` django module, can interact seamlessly with `djangoflow_auth` flutter package via this OpenApi client generation.
+
+Checkout our [simple_auth](https://github.com/djangoflow/djangoflow-examples/tree/main/simple_auth) example for a more detailed understanding of this bridging between Django and Flutter via djangoflow modules.
 
 ## FAQ
 
