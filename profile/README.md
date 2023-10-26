@@ -28,6 +28,8 @@ that uses [Flutter](https://flutter.dev) for cross-platform apps and [Django](ht
 
 We also use [openapi-generator](https://openapi-generator.tech/docs/generators/dart/) to automate the api client generation and save time and avoid human errors following [DRY](https://apexive.com/post/zero-technical-debt) principles.
 
+Join the community and ask all your question in Matrix space: https://matrix.to/#/#djangoflow:apexive.com
+
 ## 📖 History
 
 Having built a lot of software for startups [Apexive](https://apexive.com "Top-notch software development for startups. In weeks, not months.") has accumulated extensive experience and created re-usable libraries ("building blocks") that now enable us to produce high quality code in weeks, not months.
